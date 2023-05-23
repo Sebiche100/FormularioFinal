@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="list.js"></script>
+    <title>CARD</title>
+
+
+<body>
+    <div id="TODO">
+        <h1>Formulario de registro</h1>
+        <p1>E-mail:</p1>
+        <div class="cuadros">
+            <input type="text" id="Email" onblur="verifyRequired(this)">
+        </div>
+        <p1>Nombre completo:</p1>
+        <div class="cuadros">
+            <input type="text" id="NombreCompleto" onblur="verifyRequired(this)">
+        </div>
+        <p1>Fecha de nacimiento:</p1>
+        <div class="cuadro-fecha">
+            <input type="date" id="Fecha" onblur="verifyRequired(this)">
+        </div>
+        <div>
+            <p1>Sexo:</p1>
+            <div>
+                <select class="cuadros" id="Sexo" onblur="verifyRequired(this)">
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option>Otros</option>
+                </select>
+            </div>
+        </div>
+        <div class="negrita">
+            <b>Intereses</b>
+            <div class="checkbox">
+                <label class="lista" value="1"><input type="checkbox" name="" id="Caja"> Computers</label>
+                <label class="lista" value="2"><input type="checkbox" name="" id="Caja"> Sports</label>
+                <label class="lista" value="3"><input type="checkbox" name="" id="Caja"> Games</label>
+                <label class="lista" value="4"><input type="checkbox" name="" id="Caja"> Music</label>
+            </div>
+        </div>
+        <div class="boton">
+            <input type="submit" value="Registrar" onclick="getDataForm()">
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <div>
+        <h1>Lista de Usuarios Registrados</h1>
+        <table id="table-users" class="table">
+            <tr>
+                <td>Nombre</td>
+                <td>Correo</td>
+                <td>Fecha de Nacimientos</td>
+            </tr>
+            <tr>
+                <td>Peter Parker</td>
+                <td>spiderman@gmail.com</td>
+                <td>2000/11/01</td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
